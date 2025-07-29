@@ -20,5 +20,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Add Json Data
+        run: |
+          mkdir -p src/app/data
+          printf '%s' "{}" > src/app/data/data.json
+
+
       - name: Run npm build
         run: npm run build
