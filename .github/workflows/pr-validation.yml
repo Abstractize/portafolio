@@ -1,0 +1,30 @@
+name: PR Validation
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Add Json Data
+        run: |
+          mkdir -p src/app/data
+            printf '%s' '{"name":"","description":"","techStack":{"languages":[],"frameworks":[],"platforms":[],"databases":[],"cloud":[],"devops":[],"tools":[],"architectures":[],"messagingProtocols":[],"testing":[],"operatingSystems":[]},"projectList":[],"contactList":[],"experienceList":[],"testimonials":[],"certifications":[],"blogPosts":[]}' > src/app/data/data.json
+
+
+      - name: Run npm build
+        run: npm run build

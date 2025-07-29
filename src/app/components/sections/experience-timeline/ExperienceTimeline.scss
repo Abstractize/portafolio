@@ -1,0 +1,18 @@
+.experience-timeline {
+    h2 {
+        margin-bottom: 1rem;
+    }
+
+    .experience-timeline-content {
+        ul {
+            list-style: none;
+            padding: 0;
+
+            .exp-li {
+                margin-bottom: 1rem;
+                border-left: 2px solid var(--color-primary);
+                padding-left: 1rem;
+            }
+        }
+    }
+}
