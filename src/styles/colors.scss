@@ -1,0 +1,19 @@
+:root {
+    --color-bg: #e0f2fe; // Azul hielo muy claro
+    --color-surface: #bae6fd; // Azul claro para superficies
+    --color-primary: #3b82f6; // Azul vibrante
+    --color-secondary: #38bdf8; // Azul celeste
+    --color-accent: #7dd3fc; // Azul pastel
+    --color-text: #0f172a; // Azul gris oscuro para texto
+    --color-muted: #64748b; // Azul gris para texto secundario
+}
+
+[data-theme="dark"] {
+    --color-bg: #0f172a; // Azul noche para fondo
+    --color-surface: #1e293b; // Azul profundo para superficies
+    --color-primary: #3b82f6; // Azul vibrante (igual que claro)
+    --color-secondary: #38bdf8; // Azul celeste (igual que claro)
+    --color-accent: #7dd3fc; // Azul pastel (igual que claro)
+    --color-text: #e0f2fe; // Azul hielo para texto
+    --color-muted: #bae6fd; // Azul claro para texto secundario
+}
